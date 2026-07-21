@@ -47,6 +47,7 @@ const PROJECTS: ProjectData[] = [
     category: 'University Project',
     name: 'Capstone Defense Scheduler',
     description: 'A comprehensive system for scheduling graduation defense rounds. Features include bulk data import/export via templates, advanced multi-criteria search for efficient data management, and automated PDF report generation.',
+    link: 'https://prm-pi.vercel.app/',
     col1Img1: multiSearchImg,
     col1Img2: lecturerImg,
     col1Img3: exportImg,
