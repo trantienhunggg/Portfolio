@@ -2,7 +2,6 @@ import { Mail, ArrowUpRight } from 'lucide-react';
 import { FaGithub } from "react-icons/fa";
 import FadeIn from '../components/FadeIn';
 import AnimatedText from '../components/AnimatedText';
-import ContactButton from '../components/ContactButton';
 interface ContactItem {
     title: string;
     value: string;
