@@ -6,28 +6,28 @@ const DECORATIVE_IMAGES = [
   {
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
     alt: 'React icon',
-    className: 'w-[120px] sm:w-[160px] md:w-[210px] absolute top-[4%] left-[1%] sm:left-[2%] md:left-[4%]',
+    className: 'w-[60px] sm:w-[120px] md:w-[160px] lg:w-[210px] absolute top-[4%] left-[1%] sm:left-[2%] md:left-[4%] hidden sm:block',
     delay: 0.1,
     x: -80,
   },
   {
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg',
     alt: 'Vite icon',
-    className: 'w-[100px] sm:w-[140px] md:w-[180px] absolute bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%]',
+    className: 'w-[50px] sm:w-[100px] md:w-[140px] lg:w-[180px] absolute bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%] hidden sm:block',
     delay: 0.25,
     x: -80,
   },
   {
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg',
     alt: 'Spring Boot icon',
-    className: 'w-[120px] sm:w-[160px] md:w-[210px] absolute top-[4%] right-[1%] sm:right-[2%] md:right-[4%]',
+    className: 'w-[60px] sm:w-[120px] md:w-[160px] lg:w-[210px] absolute top-[4%] right-[1%] sm:right-[2%] md:right-[4%] hidden sm:block',
     delay: 0.15,
     x: 80,
   },
   {
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg',
     alt: 'Docker icon',
-    className: 'w-[130px] sm:w-[170px] md:w-[220px] absolute bottom-[8%] right-[3%] sm:right-[6%] md:right-[10%]',
+    className: 'w-[65px] sm:w-[130px] md:w-[170px] lg:w-[220px] absolute bottom-[8%] right-[3%] sm:right-[6%] md:right-[10%] hidden sm:block',
     delay: 0.3,
     x: 80,
   },
@@ -40,7 +40,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="min-h-screen relative flex items-center justify-center px-5 sm:px-8 md:px-10 py-20"
+      className="min-h-screen relative flex items-center justify-center px-4 sm:px-8 md:px-10 py-16 sm:py-20"
     >
       {/* Decorative corner images */}
       {DECORATIVE_IMAGES.map((img) => (

@@ -100,7 +100,7 @@ function ProjectCard({
   const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale]);
 
   return (
-    <div ref={containerRef} className="h-[100vh] md:h-[110vh]" style={{ position: 'relative' }}>
+    <div ref={containerRef} className="h-[90vh] sm:h-[100vh] md:h-[110vh]" style={{ position: 'relative' }}>
       <motion.div
         className="sticky top-24 md:top-32 origin-top"
         style={{
@@ -108,14 +108,14 @@ function ProjectCard({
           top: `calc(96px + ${index * 28}px)`,
         }}
       >
-        <div className="rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8">
+        <div className="rounded-[24px] sm:rounded-[40px] md:rounded-[50px] lg:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-3 sm:p-4 md:p-6 lg:p-8">
           {/* Top Row */}
-          <div className="flex items-start justify-between mb-4 sm:mb-6 md:mb-8 flex-wrap gap-4">
-            <div className="flex items-start gap-4 sm:gap-6 md:gap-10">
+          <div className="flex flex-col sm:flex-row items-start justify-between mb-3 sm:mb-4 md:mb-6 lg:mb-8 gap-3 sm:gap-4">
+            <div className="flex items-start gap-3 sm:gap-4 md:gap-6 lg:gap-10">
               {/* Number */}
               <span
                 className="hero-heading font-black leading-none"
-                style={{ fontSize: 'clamp(3rem, 10vw, 140px)' }}
+                style={{ fontSize: 'clamp(2rem, 10vw, 140px)' }}
               >
                 {project.number}
               </span>
@@ -162,11 +162,11 @@ function ProjectCard({
           </div>
 
           {/* Image Grid */}
-          <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 h-[40vh] sm:h-[50vh] md:h-[60vh]">
+          <div className="flex flex-col gap-2 sm:gap-3 md:gap-4 lg:gap-6 h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh]">
             {/* Top Row - up to 3 images */}
-            <div className="flex flex-row gap-3 sm:gap-4 md:gap-6 h-[50%]">
+            <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 lg:gap-6 h-[50%]">
               <div
-                className="flex-1 overflow-hidden bg-transparent rounded-[20px] sm:rounded-[30px] p-2 sm:p-4 flex items-center justify-center cursor-pointer hover:scale-[1.02] transition-transform"
+                className="flex-1 overflow-hidden bg-transparent rounded-[12px] sm:rounded-[20px] md:rounded-[30px] p-1 sm:p-2 md:p-4 flex items-center justify-center cursor-pointer hover:scale-[1.02] transition-transform"
                 onClick={() => setSelectedImage(project.col1Img1)}
               >
                 <MediaItem
@@ -176,7 +176,7 @@ function ProjectCard({
                 />
               </div>
               <div
-                className="flex-1 overflow-hidden bg-transparent rounded-[20px] sm:rounded-[30px] p-2 sm:p-4 flex items-center justify-center cursor-pointer hover:scale-[1.02] transition-transform"
+                className="flex-1 overflow-hidden bg-transparent rounded-[12px] sm:rounded-[20px] md:rounded-[30px] p-1 sm:p-2 md:p-4 flex items-center justify-center cursor-pointer hover:scale-[1.02] transition-transform"
                 onClick={() => setSelectedImage(project.col1Img2)}
               >
                 <MediaItem
@@ -187,7 +187,7 @@ function ProjectCard({
               </div>
               {project.col1Img3 && (
                 <div
-                  className="flex-1 overflow-hidden bg-transparent rounded-[20px] sm:rounded-[30px] p-2 sm:p-4 flex items-center justify-center cursor-pointer hover:scale-[1.02] transition-transform"
+                  className="flex-1 overflow-hidden bg-transparent rounded-[12px] sm:rounded-[20px] md:rounded-[30px] p-1 sm:p-2 md:p-4 flex items-center justify-center cursor-pointer hover:scale-[1.02] transition-transform"
                   onClick={() => setSelectedImage(project.col1Img3!)}
                 >
                   <MediaItem
@@ -200,9 +200,9 @@ function ProjectCard({
             </div>
 
             {/* Bottom Row - 1 image */}
-            <div className="flex flex-row gap-3 sm:gap-4 md:gap-6 h-[50%]">
+            <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 lg:gap-6 h-[50%]">
               <div
-                className="flex-1 overflow-hidden bg-transparent rounded-[20px] sm:rounded-[30px] p-2 sm:p-4 flex items-center justify-center cursor-pointer hover:scale-[1.02] transition-transform"
+                className="flex-1 overflow-hidden bg-transparent rounded-[12px] sm:rounded-[20px] md:rounded-[30px] p-1 sm:p-2 md:p-4 flex items-center justify-center cursor-pointer hover:scale-[1.02] transition-transform"
                 onClick={() => setSelectedImage(project.col2Img)}
               >
                 <MediaItem
@@ -250,7 +250,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 relative z-10 px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32"
+      className="bg-[#0C0C0C] rounded-t-[24px] sm:rounded-t-[40px] md:rounded-t-[50px] lg:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 relative z-10 px-3 sm:px-5 md:px-8 lg:px-10 py-14 sm:py-20 md:py-24 lg:py-32"
     >
       <FadeIn delay={0} y={40}>
         <h2

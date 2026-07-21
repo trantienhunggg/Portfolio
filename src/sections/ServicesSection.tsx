@@ -35,7 +35,7 @@ const SERVICES = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-white rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32">
+    <section className="bg-white rounded-t-[24px] sm:rounded-t-[40px] md:rounded-t-[50px] lg:rounded-t-[60px] px-4 sm:px-6 md:px-10 py-14 sm:py-20 md:py-24 lg:py-32">
       <FadeIn delay={0} y={40}>
         <h2
           className="text-[#0C0C0C] font-black uppercase text-center mb-16 sm:mb-20 md:mb-28"
@@ -60,7 +60,7 @@ export default function ServicesSection() {
               {/* Number */}
               <span
                 className="font-black text-[#0C0C0C] leading-none flex-shrink-0"
-                style={{ fontSize: 'clamp(3rem, 10vw, 140px)' }}
+                style={{ fontSize: 'clamp(2rem, 10vw, 140px)' }}
               >
                 {service.number}
               </span>
