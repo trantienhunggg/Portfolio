@@ -63,17 +63,7 @@ const PROJECTS: ProjectData[] = [
     col1Img3: multiSearch2Img,
     col2Img: footerVid,
   },
-  {
-    number: '03',
-    category: 'Client',
-    name: 'Solaris Digital',
-    col1Img1:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85',
-    col1Img2:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b.png&w=1280&q=85',
-    col2Img:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee.png&w=1280&q=85',
-  },
+
 ];
 
 function ProjectCard({
@@ -145,7 +135,7 @@ function ProjectCard({
                     <p className={`text-[#D7E2EA]/70 text-sm sm:text-base md:text-lg font-light transition-all ${isDescExpanded ? '' : 'line-clamp-2'}`}>
                       {project.description}
                     </p>
-                    <button 
+                    <button
                       onClick={() => setIsDescExpanded(!isDescExpanded)}
                       className="text-[#D7E2EA] text-xs sm:text-sm mt-1 opacity-70 hover:opacity-100 flex items-center gap-1 transition-opacity"
                     >
