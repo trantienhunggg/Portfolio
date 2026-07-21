@@ -2,7 +2,7 @@ import FadeIn from '../components/FadeIn';
 import ContactButton from '../components/ContactButton';
 import Magnet from '../components/Magnet';
 
-const NAV_LINKS = ['About', 'Price', 'Projects', 'Contact'];
+const NAV_LINKS = ['About', 'Projects', 'Contact', 'Price'];
 
 import avatar3D from '../assets/avatar_3d.png';
 
