@@ -1,6 +1,7 @@
 import FadeIn from '../components/FadeIn';
 import AnimatedText from '../components/AnimatedText';
 import ContactButton from '../components/ContactButton';
+import DownloadCVButton from '../components/DownloadCVButton';
 
 const DECORATIVE_IMAGES = [
   {
@@ -68,8 +69,9 @@ export default function AboutSection() {
           />
         </div>
 
-        <div className="mt-16 sm:mt-20 md:mt-24">
+        <div className="mt-16 sm:mt-20 md:mt-24 flex items-center gap-4 flex-wrap justify-center">
           <ContactButton />
+          <DownloadCVButton />
         </div>
       </div>
     </section>

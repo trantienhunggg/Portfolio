@@ -23,6 +23,7 @@ interface ProjectData {
   number: string;
   category: string;
   name: string;
+  role?: string;
   col1Img1: string;
   col1Img2: string;
   col1Img3?: string;
@@ -46,7 +47,8 @@ const PROJECTS: ProjectData[] = [
     number: '01',
     category: 'University Project',
     name: 'Capstone Defense Scheduler',
-    description: 'A comprehensive system for scheduling graduation defense rounds. Features include bulk data import/export via templates, advanced multi-criteria search for efficient data management, and automated PDF report generation.',
+    role: 'Main Front-end & CRUD APIs',
+    description: 'A comprehensive system for scheduling graduation defense rounds. As Main Front-end, I built the UI, integrated RESTful CRUD APIs, developed bulk data import/export via templates, advanced multi-criteria search, and automated PDF report generation.',
     link: 'https://prm-pi.vercel.app/',
     col1Img1: multiSearchImg,
     col1Img2: lecturerImg,
@@ -57,14 +59,14 @@ const PROJECTS: ProjectData[] = [
     number: '02',
     category: 'Freelance',
     name: 'Genie Global Workforce',
-    description: 'A corporate website built for a German-standard recruitment and training agency. I developed the Front-End, featuring a multilingual interface (static data localization) and dynamic media elements like video backgrounds.',
+    role: 'Main Front-end',
+    description: 'A corporate website built for a German-standard recruitment and training agency. As Main Front-end developer, I crafted the responsive UI, implemented multilingual localization (static data), and integrated dynamic video backgrounds.',
     link: 'https://genieglobal-workforce.com/',
     col1Img1: changeLangImg,
     col1Img2: mapVid,
     col1Img3: multiSearch2Img,
     col2Img: footerVid,
   },
-
 ];
 
 function ProjectCard({
@@ -122,9 +124,16 @@ function ProjectCard({
               </span>
 
               <div className="flex flex-col gap-1 pt-2 sm:pt-4">
-                <span className="text-[#D7E2EA]/60 text-xs sm:text-sm uppercase tracking-widest font-light">
-                  {project.category}
-                </span>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-[#D7E2EA]/60 text-xs sm:text-sm uppercase tracking-widest font-light">
+                    {project.category}
+                  </span>
+                  {project.role && (
+                    <span className="text-[#0C0C0C] bg-[#D7E2EA] font-semibold text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                      Role: {project.role}
+                    </span>
+                  )}
+                </div>
                 <h3
                   className="text-[#D7E2EA] font-medium uppercase"
                   style={{ fontSize: 'clamp(1rem, 2.2vw, 2.1rem)' }}

@@ -1,8 +1,7 @@
 import FadeIn from '../components/FadeIn';
 import ContactButton from '../components/ContactButton';
+import DownloadCVButton from '../components/DownloadCVButton';
 import Magnet from '../components/Magnet';
-
-const NAV_LINKS = ['About', 'Projects', 'Contact', 'Price'];
 
 import avatar3D from '../assets/avatar_3d.png';
 
@@ -10,22 +9,8 @@ const PORTRAIT_URL = avatar3D;
 
 export default function HeroSection() {
   return (
-    <section className="h-screen flex flex-col relative pt-0 md:pt-0"
+    <section id="home" className="h-screen flex flex-col relative pt-0 md:pt-0"
       style={{ overflowX: 'clip' }}>
-      {/* Navbar */}
-      <FadeIn delay={0} y={-20}>
-        <nav className="absolute top-0 left-0 w-full flex justify-center sm:justify-between px-4 sm:px-6 md:px-10 pt-4 sm:pt-6 z-50 gap-3 sm:gap-0 flex-wrap">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
-              className="text-[#D7E2EA] font-medium uppercase tracking-wider text-xs sm:text-sm md:text-lg lg:text-[1.4rem] hover:opacity-70 transition-opacity duration-200"
-            >
-              {link}
-            </a>
-          ))}
-        </nav>
-      </FadeIn>
 
       {/* Hero Heading */}
       <FadeIn delay={0.15} y={40} className="relative z-20">
@@ -48,14 +33,14 @@ export default function HeroSection() {
         >
           <img
             src={PORTRAIT_URL}
-            alt="Jack portrait"
+            alt="Trần Tiến Hùng portrait"
             className="w-full h-auto object-cover"
           />
         </Magnet>
       </FadeIn>
 
       {/* Bottom Bar */}
-      <div className="mt-auto flex flex-col sm:flex-row justify-between items-center sm:items-end gap-4 pb-5 sm:pb-8 md:pb-10 px-4 sm:px-6 md:px-10">
+      <div className="mt-auto flex flex-col sm:flex-row justify-between items-center sm:items-end gap-4 pb-5 sm:pb-8 md:pb-10 px-4 sm:px-6 md:px-10 z-20">
         <FadeIn delay={0.35} y={20}>
           <p
             className="text-[#D7E2EA] font-light tracking-wide leading-relaxed max-w-[280px] sm:max-w-[360px] md:max-w-[480px] text-center sm:text-left"
@@ -66,7 +51,10 @@ export default function HeroSection() {
         </FadeIn>
 
         <FadeIn delay={0.5} y={20}>
-          <ContactButton />
+          <div className="flex items-center gap-3 sm:gap-4 flex-wrap justify-center">
+            <ContactButton />
+            <DownloadCVButton />
+          </div>
         </FadeIn>
       </div>
     </section>

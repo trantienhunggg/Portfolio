@@ -15,6 +15,7 @@ body,
 #root {
   background-color: #0c0c0c;
   font-family: 'Kanit', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .hero-heading {

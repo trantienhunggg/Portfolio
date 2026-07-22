@@ -1,4 +1,4 @@
-import { Mail, ArrowUpRight } from 'lucide-react';
+import { Mail, ArrowUpRight, Phone } from 'lucide-react';
 import { FaGithub } from "react-icons/fa";
 import FadeIn from '../components/FadeIn';
 import AnimatedText from '../components/AnimatedText';
@@ -10,6 +10,12 @@ interface ContactItem {
 }
 
 const CONTACTS: ContactItem[] = [
+    {
+        title: 'Phone / Zalo',
+        value: '0937 639 157',
+        href: 'https://zalo.me/0937639157',
+        icon: <Phone size={22} />,
+    },
     {
         title: 'Email',
         value: 'trantienhung21122004@gmail.com',
