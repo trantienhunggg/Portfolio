@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import HeroSection from './sections/HeroSection';
 import MarqueeSection from './sections/MarqueeSection';
@@ -20,6 +21,7 @@ export default function App() {
       <ProjectsSection />
       <ContactSection />
       <ScrollToTopButton />
+      <Analytics />
     </div>
   );
 }
